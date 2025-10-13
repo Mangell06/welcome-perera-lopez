@@ -3,6 +3,7 @@ body {
     background-color: #1e1e2f;
     color: #fff;
     padding: 20px;
+    margin: 0;
 }
 
 h1 {
@@ -11,82 +12,78 @@ h1 {
     color: #9b59b6;
 }
 
+/* Contenedor principal */
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* centra horizontalmente */
+    justify-content: center;
+    gap: 20px;
 }
 
-.card {
+/* Cada perfil (antes .card) */
+ul div {
     background-color: #2c2c44;
     border-radius: 10px;
     text-align: center;
-    width: 30%;          /* 3 columnas */
-    margin-bottom: 20px; /* espacio entre filas */
-    margin-left: 1.5%;
-    margin-right: 1.5%;
+    width: 250px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card img {
+ul div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+}
+
+/* Imagen de perfil */
+ul div img {
     width: 100%;
-    height: 400px;
+    height: 200px;
+    object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    object-fit: cover;
     display: block;
 }
 
-.card p {
-    padding: 10px;
-    font-size: 1em;
+/* Nombre del perfil */
+ul div a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
     color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
+ul div a:hover {
+    color: #9b59b6;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
-
-    body {
-        padding: 15px;
-    }
-    h1 {
-        font-size: 1.8em;
-        margin-bottom: 25px;
-    }
-    .card img {
-        height: 300px;
-    }
-    .card p {
-        font-size: 0.95em;
-    }
-
-    .card {
+    ul div {
         width: 45%;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
+    }
+    ul div img {
+        height: 180px;
     }
 }
 
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
+    ul {
+        flex-direction: column;
+        align-items: center;
     }
-    h1 {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-    .card img {
-        height: 250px;
-    }
-    .card p {
-        font-size: 0.9em;
-    }
-
-    .card {
+    ul div {
         width: 90%;
-        margin: 0 auto;
-        margin-left: 5%;
-        margin-right: 5%;
+    }
+    ul div img {
+        height: 160px;
     }
 }
