@@ -18,7 +18,7 @@
             }
             echo "<div>";
             $name = substr($profile,0,-5);
-            echo "<a href='profile/$profile'>";
+            echo "<a href='profiles/$profile'>";
             $img = glob("images/$name.*");
             $img = $img ? $img[0] : "";
             echo "<img src='$img' width='130' alt='$name'>";
