@@ -11,7 +11,7 @@
     <h1>Project Welcome</h1>
     <ul>
         <?php
-        $profiles = scandir("./profile",SCANDIR_SORT_ASCENDING);
+        $profiles = scandir("./profiles",SCANDIR_SORT_ASCENDING);
         foreach($profiles as $profile) {
             if ($profile === "." || $profile === ".."){
                 continue;
@@ -19,7 +19,7 @@
             echo "<div>";
             $name = substr($profile,0,-5);
             echo "<a href='profile/$profile'>";
-            $img = glob("img/$name.*");
+            $img = glob("images/$name.*");
             $img = $img ? $img[0] : "";
             echo "<img src='$img' width='130' alt='$name'>";
             echo $name."</a>";
@@ -29,6 +29,7 @@
     </ul>
 </body>
 </html>
+
 
 
 
