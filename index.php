@@ -1,9 +1,18 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> davidperera
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Welcome</title>
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="style.css">
+
+>>>>>>> davidperera
 </head>
 <body>
     <h1>Project Welcome</h1>
@@ -26,4 +35,8 @@
         ?>
     </ul>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> davidperera
